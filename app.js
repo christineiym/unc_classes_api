@@ -1,15 +1,14 @@
-const express = require("express");
-const path = require("path");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+import express from 'express';
+import path from 'path';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 
-const dotEnv = require("dotenv");
+import dotEnv from 'dotenv';
 dotEnv.config({ path: "./config.env" });
 
-const searchRoutes = require("./routes/search")
+import searchRoutes from "./routes.js"
 
 const port = process.env.PORT || 3030;
-const headers = process.env.HEADERS;
 const app = express();
 const HTTP_STATUS_OK = 200;
 const HTTP_STATUS_NOT_FOUND = 404;
@@ -21,7 +20,6 @@ app.use(
 );
 app.use(express.json());
 app.use(cors());
-
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
@@ -35,7 +33,7 @@ app.get("/app/", (req, res, next) => {
 });
 
 // Routes
-// app.use(searchRoutes);
+app.use(searchRoutes);
 
 //// Default response for any request not addressed by the defined endpoints ////
 app.use(function (req, res, next) {

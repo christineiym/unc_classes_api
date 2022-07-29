@@ -1,6 +1,7 @@
 {
   "name": "unc_classes_api",
   "version": "1.0.0",
+  "type": "module",
   "description": "A middleware API for accessing information on classes at UNC. For educational purposes.",
   "main": "app.js",
   "scripts": {
@@ -27,6 +28,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "jssoup": "^0.0.15",
+    "node-fetch": "^3.2.9",
     "nodemon": "^2.0.19",
     "path": "^0.12.7"
   }

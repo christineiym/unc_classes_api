@@ -1,6 +1,6 @@
 # Repository-Specific
 config.env
-workspace.txt
+sandbox/
 
 # Logs
 logs

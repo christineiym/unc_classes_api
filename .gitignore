@@ -1,3 +1,7 @@
+# Repository-Specific
+config.env
+workspace.txt
+
 # Logs
 logs
 *.log
